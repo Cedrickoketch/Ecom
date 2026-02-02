@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 
 function App() {
     return(
-        <h1>Hello world</h1>
+        <div className='bg-neutral-50 h-full'>
+            <Navbar />
+        </div>
     )
 }
 
