@@ -6,21 +6,21 @@ function Navbar() {
     const [navIsOpen, setNavIsOpen] = useState(false);
 
     return(
-        <nav className='bg-neutral-50 px-5 flex h-10 items-center'>
-            <h1 className='font-bold mr-auto'>AutoHub</h1>
+        <nav className='bg-neutral-50 px-5 flex h-10 w-full items-center'>
+            <h1 className='font-bold mr-auto pl-5'>AutoHub</h1>
 
-            <div className=''>
+            <div className='sticky top-0 lg:hidden ml-auto flex flex-col items-right'>
 
-                <button onClick={setNavIsOpen = !navIsOpen}>
-                    {navisOpen ? <LuMenu /> : <MdOutlineClose />}
+                <button>
+                    <LuMenu />
                 </button>
 
-                <ul className='bg-neutral-50 absolute items-center top-10 pt-5 right-0 w-[60vw] h-[80vh] rounded-md shadow-slate-300 shadow-md text-center'>
-                    <li><a className='font-bold text-2xl' href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Sign up</a></li>
-                    <li><a href="">Sign in</a></li>
-                </ul>
+                <div className='absolute top-10 flex flex-col w-full h-full items-center gap-10 list-none'>
+                    <li><a className='font-bold text-sm hover:text-blue-500' href="">Home</a></li>
+                    <li><a className='font-bold text-sm hover:text-blue-500' href="">About</a></li>
+                    <li><a className='font-bold text-sm hover:text-blue-500' href="">Sign up</a></li>
+                    <li><a className='font-bold text-sm hover:text-blue-500' href="">Sign in</a></li>
+                </div>
             </div>
         </nav>
     )
